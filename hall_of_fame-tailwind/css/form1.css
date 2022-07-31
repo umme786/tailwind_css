@@ -1,0 +1,108 @@
+.navbar {
+    margin: 0 auto;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: rgb(7, 15, 126);
+}
+.content{
+    margin: 0 auto;
+}
+.content img{
+    margin: 0 auto;
+}
+.container {
+    margin: 0 auto;
+}
+.container img{
+    margin: 20px auto;
+}
+.left-side-wrap-desktop{
+    box-shadow: 6px 0 5px -2px rgb(233, 232, 232);
+}
+.form-wrap{
+    margin: 0 auto;
+}
+.mobile{
+    display: none;
+}
+.left-side-wrap-mobile{
+   display:none;
+}
+.nav-mobile{
+    display: none;
+}
+/* -------------------responsive------------------- */
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 3.9rem;
+        flex-direction: column;
+        width: 70%;
+        border-radius: 6px;
+        text-align: center;
+        transition: 0.2s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        left: 0;
+        background-color: white;
+        z-index: 9;
+        position: fixed;
+    }
+    li{
+        box-shadow: 0px 1px 3px 1px rgb(233 232 232);
+        border-radius: 6px;
+        width: 100%;
+    }
+    li img{
+        margin: 0 auto;
+    }
+    .nav-item {
+        padding: 1.5rem 0;
+    }
+    .nav-item-img {
+        padding: 0.8rem 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(4px) rotate(-41deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        transform: translateY(-2px) rotate(44deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        opacity: 0;
+    }
+    .nav-mobile{
+        display: block;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .mobile{
+        display: block;
+        width: 80%;
+    }
+    .desktop{
+        display: none;
+    }
+    .left-side-wrap-desktop{
+        display: none;
+    }
+    .left-side-wrap-mobile{
+        display: block;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .mobile{
+        width: 95%;
+    }
+}

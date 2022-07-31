@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/hall-of-fame-form.css">
+    <title> Form </title>
+    <style>
+        /* 12 */
+        .btn-12{
+        position: relative;
+        right: 15%;
+        bottom: 20px;
+        border:none;
+        box-shadow: none;
+        color: white;
+        line-height: 42px;
+        -webkit-perspective: 230px;
+        perspective: 230px;
+        }
+        .btn-12 span {
+        background: rgb(0,172,238);
+        background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+        display: block;
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+        7px 7px 20px 0px rgba(0,0,0,.1),
+        4px 4px 5px 0px rgba(0,0,0,.1);
+        border-radius: 5px;
+        margin:0;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        }
+        .btn-12 span:nth-child(1) {
+        box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+        }
+        .btn-12 span:nth-child(2) {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+        }
+        .btn-12:hover span:nth-child(1) {
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+        7px 7px 20px 0px rgba(0,0,0,.1),
+        4px 4px 5px 0px rgba(0,0,0,.1);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        }
+        .btn-12:hover span:nth-child(2) {
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+        7px 7px 20px 0px rgba(0,0,0,.1),
+        4px 4px 5px 0px rgba(0,0,0,.1);
+        color: transparent;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <div class="navbar">
+        <img src="./img/Asset 1@4x 1.png" alt="logo">
+        <li> Courses library </li>
+        <li> One Neuron </li>
+        <li> Internship </li>
+    </div>
+  <div class="form-wrap">
+        <div class="form-left">
+            <div class="banner">
+               <h2 class="detail"> Perks you get by sharing your journey! </h2>
+               <div class="gift">
+                   <img src="./img/animation_500_l1nfo10n 1-2.png" alt="img">
+                   <h2 class="won"> Exciting gifts and goodies </h2>
+               </div>
+                <div class="gift">
+                    <img src="./img/animation_500_l1nfzwon 1-2.png" alt="img">
+                    <h2 class="won"> Cash Rewards </h2>
+                </div>
+                <h1 class="gradient-text2"> What are you waiting for? fill the form now <img src="./img/hand.png" alt="img"> </h1>
+            </div>
+        </div>
+
+        <div class="form-right module-border-wrap clearfix">
+            <form class="form-inline" action="./form-popup.html">
+                <div class="profile">
+                     
+                    <div class="image-upload">
+                        <label for="file-input">
+                              <label for="pwd"> Upload Photo </label>
+                          <img src="./img/Vector.png"/>
+                        </label>
+                      
+                        <input id="file-input" type="file" />
+                    </div>
+                      
+                </div>
+                     <input type="name" id="name" placeholder="Name" />
+                     <input type="email" id="email" placeholder="Email Id" />
+                     <input type="link" id="link" placeholder="LinkedIn id" />
+                     <input type="name" id="company" placeholder="Company" />
+                     <input type="name" id="designation" placeholder="Designation" />
+                     <input type="file" id="myfile" name="myfile">
+                     <textarea type="name" id="name" rows="4" cols="50" placeholder="Your thoughts about us" /> </textarea>
+
+                     <div class="submit">
+                        <!-- <button type="submit">Submit</button> -->
+                        <button class="custom-btn btn-12"><span> Click! </span><span> Submit </span></button>
+                     </div>
+            </form>          
+        </div>
+  </div>
+</div>
+</body>
+</html>

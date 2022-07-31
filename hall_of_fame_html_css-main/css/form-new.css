@@ -1,0 +1,738 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&family=Noto+Sans&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f0c07;
+    color: white;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+html {
+    font-size: 62.5%;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* --------------------------navbar start-------------------------- */
+
+.header{
+}
+
+.navbar {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    width: 85%;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+.nav-link:hover{
+    color: #F7B60E;
+}
+.nav-item a{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+}
+/* --------------------------navbar end-------------------------- */
+
+/* --------------------------profile start------------------------- */
+    .image-upload>input {
+        display: none;
+    }
+/* --------------------------profile end------------------------- */
+
+/* -------------------------form start------------------------- */
+.content{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.share-journey{
+    margin-top: 40px;
+}
+.journey{
+    color: #F7B60E;
+    margin: 20px 0px;
+    font-size: 36px;
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.profile1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.profile1 img{
+    cursor: pointer;
+}
+
+.pro1{
+
+}
+.pro2{
+    width: 25%;
+}
+.pro3{
+    width: 45%;
+}
+
+#name, #email, #link{
+    padding: 15px 15px;
+    background: #212224d4;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 13px;
+    width: 100%;
+}
+#name, #email, #link {
+    color: #D7D7D7;
+}
+ #company{
+    color: #D7D7D7;
+}
+#name:focus, #email:focus, #link:focus{
+    background: #212224d4;
+}
+.profile2{
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+.company{
+    margin: 15px 0px;
+}
+
+.designation{
+    margin-left: 20px;
+}
+#company{
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 13px;
+    width: 100%;
+    background: #383838;
+}
+
+.profile1 input:-webkit-autofill,
+.profile1 input:-webkit-autofill:hover,
+.profile1 input:-webkit-autofill:focus,
+.profile1 input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px #0e0f0fd4 inset !important;
+  -webkit-appearance: none;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.profile2 input:-webkit-autofill,
+.profile2 input:-webkit-autofill:hover,
+.profile2 input:-webkit-autofill:focus,
+.profile2 input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px #0b0b0bd4 inset !important;
+  -webkit-appearance: none;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    -webkit-text-fill-color: white;
+}
+
+.profile1 input:-webkit-autofill{
+    -webkit-text-fill-color: white;
+}
+.profile2 input:-webkit-autofill{
+    -webkit-text-fill-color: white;
+}
+/* --------------------profile 2------------------- */
+.profile2 ::placeholder {
+    color: #D7D7D7;
+	opacity: 1;
+}
+
+.profile2 :-ms-input-placeholder {
+    color: #D7D7D7;
+}
+
+.profile2 ::-ms-input-placeholder {
+    color: #D7D7D7;
+}
+.profile3{
+    width: 45%;
+}
+/* --------------------profile 3------------------- */
+
+.profile3 input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(220, 219, 219) !important;
+}
+
+.profile3 ::placeholder {
+	color: #D7D7D7;
+	opacity: 1;
+}
+
+.profile3 :-ms-input-placeholder {
+    color: #D7D7D7;
+}
+
+.profile3 ::-ms-input-placeholder {
+	color: #D7D7D7;
+}
+
+.profile3 input:-webkit-autofill,
+.profile3 input:-webkit-autofill:hover,
+.profile3 input:-webkit-autofill:focus,
+.profile3 input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px #0b0b0bd4 inset !important;
+  -webkit-appearance: none;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+/* --------------------profile 4------------------- */
+
+textarea::-webkit-input-placeholder {
+    color: #D7D7D7;
+    }
+    
+    textarea:-moz-placeholder { /* Firefox 18- */
+        color: #D7D7D7;
+    }
+    
+    textarea::-moz-placeholder {  /* Firefox 19+ */
+        color: #D7D7D7;
+    }
+    
+    textarea:-ms-input-placeholder {
+        color: #D7D7D7;
+    }
+
+    
+.pro4{
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.offer{
+    margin: 0px 40px;
+    /* width: 200px; */
+    cursor: pointer;
+    height: 38px;
+}
+.profile4{
+    margin: 15px 0px;
+}
+#name, #email, #link, #company{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+}
+/* -------------------button------------------ */
+.button-wrap{
+    border: none;
+    border-radius: 10px;
+}
+.button {
+    border: none;
+    color: black;
+    padding: 10px 40px;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    background: #FDBA0E;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+  }
+/* --------------------------form end------------------------- */
+
+/* --------------------footer start------------------ */
+.footer-wrap{
+    margin: 40px 0px;
+    padding: 10px;
+    background: #1F1A14;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-between;
+}
+.foot h3{
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+.foot p{
+    color: grey;
+    margin-top: 5px;
+    font-size: 10px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+.foot-img{
+    display: flex;
+    align-items: center;
+}
+.foot-img img{
+    margin: 0px 8px;
+}
+.youtube{
+    height: 15px;
+    width: 20px;
+}
+.twitter{
+    height: 15px;
+    width: 20px;
+}
+.linkedin{
+    height: 15px;
+    width: 17px;
+}
+.fb{
+    height: 15px;
+    width: 8px;
+}
+.footer-none{
+    display: none;
+}
+/* --------------------footer end------------------- */
+
+/* --------------------------Responsive start-------------------------- */
+@media only screen and (max-width: 1330px) {
+    /* -------------------navbar-------------- */
+    .navbar {
+        width: 90%;
+    }    
+    /* ----------------------banner--------------- */
+    .content {
+        width: 75%;
+    }
+    /* -------------------footer--------------- */
+    .copyright {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1165px) {
+    /* ---------------banner-------------------- */
+    .profile2 {
+        width: 80%;
+    }
+    .profile3 {
+        width: 55%;
+    }
+    /* --------------------footer------------------ */
+    .copyright {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    /* -----------------------navbar------------- */
+    .navbar {
+        width: 95%;
+    }
+    /* ----------------------banner-------------- */
+    .content {
+        width: 80%;
+    }
+    /* -----------------------footer-------------- */
+    .copyright {
+        width: 52%;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    /* --------------------banner----------------- */
+    .profile3 {
+        width: 60%;
+    }
+    /* -----------------------footer-------------- */
+    .copyright {
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 865px) {
+    /* -------------------banner---------------------- */
+    .content {
+        width: 85%;
+    }
+    /* -----------------------footer-------------- */
+    .copyright {
+        width: auto;
+    }
+    .foot2{
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* ---------------navbar------------ */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #0f0c07;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.6s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar {
+        justify-content: space-between;
+    }    
+    .header {
+        width: 100%;
+        position: fixed;
+        background: #0f0c07;
+    }
+    .navbar img{
+        width: 120px;
+    }
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    .nav-menu{
+        padding-bottom: 100vh;
+    }
+    /* -------------------banner--------------- */
+    .share-journey{
+        margin-top: 80px;
+    }
+    .profile1 {
+        display: block;
+    }
+    .pro2 {
+        width: 60%;
+        margin: 20px 0px;
+    }
+    .profile2 {
+        width: 100%;
+    }
+    .pro3 {
+        width: 47%;
+    }
+    .profile3 {
+        width: 70%;
+    }
+    .company {
+        margin: 5px 0px;
+    }
+    .button {
+        padding: 8px 40px;
+    }
+ 
+    /* ----------------footer--------------------- */
+    .foot img{
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    /* --------------banner---------------- */
+    .offer {
+        margin: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* --------------banner---------------- */
+    .profile3 {
+        width: 75%;
+    }
+    /* ------------------footer------------ */
+    .footer-wrap {
+        margin: 25px 0px;
+    }
+    .foot img {
+        width: 90px;
+    }
+    .foot2 {
+        margin-left: 12px;
+    }
+    .foot h3 {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+    .foot p {
+        margin-top: 3px;
+        font-size: 9px;
+    }
+    .foot-img img {
+        margin: 0px 5px;
+    }
+    .youtube {
+        height: 12px;
+        width: 17px;
+    }
+    .twitter {
+        height: 12px;
+        width: 15px;
+    }
+    .linkedin {
+        height: 13px;
+        width: 13px;
+    }
+    .fb {
+        height: 13px;
+        width: 5px;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    /* ------------------navbar------------------ */
+    .navbar img {
+        width: 100px;
+    }
+    .nav-link {
+        font-size: 1.2rem;
+    }    
+/* --------------banner-------------- */
+    #name, #email, #link {
+        padding: 12px 15px;
+    }
+    #company {
+        padding: 12px 15px;
+    }
+    .profile3 {
+        width: 80%;
+    }
+        /* ----------------------footer--------------- */
+}
+
+@media only screen and (max-width: 505px) {
+    /* -----------------banner--------------- */
+    .profile3 {
+        width: 90%;
+    }
+          /* ----------------------footer--------------- */
+    .foot2 {
+        /* margin: auto; */
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    /* -----------------banner--------------- */
+    .profile2 {
+        display: block;
+    }
+    .pro1 {
+        text-align: center;
+    }
+    .pro2 {
+        width: 100%;
+        margin: 15px 0px 10px 0px;
+    }
+    .pro3 {
+        width: 100%;
+    }    
+    .company {
+        margin: 5px 0px 10px 0px;
+    }
+    .pro4 {
+        margin: 5px 0px;
+    }
+    .profile3 {
+        width: 100%;
+    }
+    .company2{
+        height: 90px;
+    }
+    .pro4 {
+        display: block;
+    }
+    .upload-img{
+        margin: 15px auto;
+        text-align: center;
+    }
+    .journey {
+        text-align: center;
+    }
+    .button-wrap {
+        text-align: center;
+    }
+    /* --------------------footer------------------- */
+    .foot img {
+        width: 80px;
+    }
+    .foot-img img {
+        margin: 0px 3px;
+    }
+    .youtube {
+        height: 11px;
+        width: 14px;
+    }
+    .twitter {
+        height: 10px;
+        width: 13px;
+    }
+    .linkedin {
+        height: 11px;
+        width: 11px;
+    }
+    .fb {
+        height: 10px;
+        width: 5px;
+    }
+    .foot h3 {
+        margin-bottom: 1px;
+    }
+    .foot p {
+        margin-top: 0px;
+    }
+    .footer-wrap {
+        margin: 15px 0px;
+    }
+    .footer {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    /* ---------------banner----------------- */
+    .share-journey {
+        margin-top: 60px;
+    }
+    .journey {
+        font-size: 30px;
+    }
+    .pro4 {
+        display: block;
+    }
+    .offer {
+        margin: 15px 0px;
+        width: 125px;
+    }
+    /* ---------------footer--------------- */
+    .footer-block{
+        display: none;
+    }
+    .footer-none{
+        display: block;
+    }
+    .foot h3 {
+        margin-bottom: 0;
+        font-size: 8px;
+    }
+    .foot p {
+        margin-top: 0px;
+        font-size: 9px;
+    }
+    .display-wrap{
+        text-align: start;
+    }
+    .footer {
+        width: 95%;
+    }
+    .foot2 {
+        margin: auto;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 312px){
+    .journey {
+        font-size: 25px;
+    }
+}
+/* --------------------------Responsive end-------------------------- */

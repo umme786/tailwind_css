@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hall Of Fame </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/hall-of-fame.css">
+    <style>
+#all-tag{
+    background-image: url(bg-light.png), linear-gradient(to right, #171C24, #171C24);
+    background-repeat: no-repeat;
+    background-position: bottom right, left, right;
+}
+    </style>
+</head>
+
+<body class="black">
+  <!----------------------wrapper start----------------------->
+  <div> 
+  <!----------------------header start----------------------->
+    <header>
+        <nav class="navbar flex justify-between items-center black py-8 w-[90%]">
+   
+            <a href="#" class="nav-logo"> <img src="./img/Asset 1@4x 1.png" alt="logo" class="w-[150px]"> </a>
+            <ul class="nav-menu flex justify-between items-center black">
+                <li class="nav-item mx-5">
+                    <a href="#" class="nav-link font-normal text-white hover:text-yellow-500"> Courses library </a>
+                </li>
+                <li class="nav-item mx-5">
+                    <a href="#" class="nav-link font-normal text-yellow-500"> One Neuron </a>
+                </li>
+                <li class="nav-item mx-5">
+                    <a href="#" class="nav-link font-normal text-white hover:text-yellow-500"> Internship </a>
+                </li>
+                <li class="nav-item mx-5">
+                    <a href="#" class="nav-link font-normal"> <button class="bg-yellow-500 px-3 py-2 mx-2 rounded-md text-black font-bold hover:bg-white active:bg-green-500 focus:bg-white"> Sign in </button> </a>
+                </li>
+            </ul>
+            <div class="hamburger cursor-pointer" onclick="myFunctionnav()">
+                <span class="bar bg-white mt-1 w-[25px] h-[2.6px]"></span>
+                <span class="bar bg-white mt-1 w-[25px] h-[2.6px]"></span>
+                <span class="bar bg-white mt-1 w-[17px] h-[2.6px]"></span>
+            </div>
+        </nav>
+    </header>
+  <!----------------------header end----------------------->
+
+<div id="banner-wrap">
+      <!----------------------banner start----------------------->
+
+      <main class="main lg:flex justify-around py-20 items-center w-[80%] md:block">
+        <div class="lg:w-[50%] md:w-[100%]">
+            <div class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-7xl text-white font-serif font-normal">
+                iNeuron Achievers
+            </div>
+            <p class="py-6 text-lg text-zinc-500 font-sans"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part of the iNeuron achiever group only if you stay consistent and be determined. </p>
+
+            <div class="my-4">
+                <button
+                    class="bg-yellow-500 px-3 py-2 mx-2 rounded-md text-black font-medium hover:bg-white active:bg-green-500 focus:bg-white">
+                    Share your story
+                </button>
+
+            </div>
+        </div>
+        <div class="element flex items-center lg:place-content-end md:place-content-center lg:w-[50%] md:w-[100%]">
+            <img src="./img/Group.png" alt="img" class="lg:w-[80%] md:w-[60%]">
+        </div>
+    </main>
+  <!----------------------banner end----------------------->
+
+    <!-- <div>
+        <img src="./img/all-img.png" alt="img" class="w-[100%]">
+    </div> -->
+
+    <div class="py-10 sm:py-20" id="all-tag">
+
+        <div class="tag w-[90%] md:w-[80%] grid grid-cols-4 sm:grid-cols-5">
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/microsoft.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/vm.png" alt="img" />
+              </div>
+          </div>
+          <!-- <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/salesforce-2.png" alt="img" />
+              </div>
+          </div> -->
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/Adobe_Corporate_logo.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/delo.png" alt="img" />
+              </div>
+          </div>
+          <!-- <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/ernst-young-ey.png" alt="img" />
+              </div>
+          </div> -->
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/kpmg.png" alt="img" />
+              </div>
+          </div>
+          <!-- <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/pwc.png" alt="img" />
+              </div>
+          </div> -->
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/tata.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/info.png" alt="img" />
+              </div>
+          </div>
+          <!-- <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/Wipro_Primary_Logo_Color_RGB.png" alt="img" />
+              </div>
+          </div> -->
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/ibm.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/capgemini.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/accenture-7.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/walmart.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/Amazon_logo 1.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/jp.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/fracta.png" alt="img" />
+              </div>
+          </div>
+          <!-- <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/oyo.png" alt="img" />
+              </div>
+          </div> -->
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/swiggy.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/zomato.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/samsung.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/paytm.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/tvs.png" alt="img" />
+              </div>
+          </div>
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/myntra.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/oyo.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/salesforce-2.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/ernst-young-ey.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/pwc.png" alt="img" />
+              </div>
+          </div>
+
+          <div class="tag-img my-2 p-3 flex items-center">
+              <div class="flex flex-col items-center">
+                      <img src="./img/Wipro_Primary_Logo_Color_RGB.png" alt="img" />
+              </div>
+          </div>
+
+        </div>
+  </div>
+
+  <!---------------------sign in start----------------------->
+
+    <section class="section text-white w-[90%] lg:w-[85%] my-16 px-4 lg:px-8 py-4 rounded-[25px] border-2 border-black gradient">
+        <h2 class="text-center py-8 text-2xl md:text-3xl lg:text-4xl"> Feature your story on Hall of Fame </h2>
+     <div class="container md:flex md:flex-wrap justify-around w-[100%]">
+        <div class="pb-5 md:w-[28%] text-center lg:text-left">
+            <h3 class="py-4 md:text-xl lg:text-2xl"> <span class="bg-yellow-500 rounded-full text-lg pr-[3px] pl-[7px] mr-3 text-black font-bold"> 1 </span> Sign in with us </h3>
+            <p class="md:text-md lg:text-lg"> Lörem ipsum krot laheten det gyling. Kakase sper: tedäsm. Vaheten kagt lase.  </p>
+        </div>
+        <div class="pb-5 md:w-[28%] text-center lg:text-left">
+            <h3 class="py-4 md:text-xl lg:text-2xl"> <span class="bg-yellow-500 rounded-full text-lg pr-[3px] pl-[7px] mr-3 text-black font-bold"> 2 </span> Share your story </h3>
+            <p class="md:text-md lg:text-lg"> Lörem ipsum krot laheten det gyling. Kakase sper: tedäsm. Vaheten kagt lase. </p>
+        </div>
+        <div class="pb-5 md:w-[28%] text-center lg:text-left">
+            <h3 class="py-4 md:text-xl lg:text-2xl"> <span class="bg-yellow-500 rounded-full text-lg pr-[3px] pl-[7px] mr-3 text-black font-bold"> 3 </span> Share your story </h3>
+           <p class="md:text-md lg:text-lg"> Lörem ipsum krot laheten det gyling. Kakase sper: tedäsm. Vaheten kagt lase. </p>
+       </div>
+     </div>
+    </section>
+
+  <!---------------------sign in end----------------------->
+
+    <section class="section content text-white w-[80%]">
+        <h2 class="text-center py-8 text-3xl md:text-4xl font-serif"> Students in Hall of Fame </h2>
+        <h2 class="text-center text-3xl md:text-4xl font-serif"> 5000 </h2>
+
+        <div class="mb-3 pt-0">
+            <input type="text" placeholder="🔍 Find in Hall of Fame" class="px-3 py-3 my-9 placeholder-white relative bg-gray-900 rounded text-white text-sm border-0 shadow outline-none focus:outline-none focus:ring w-[100%]"/>
+        </div>
+    </section>
+
+    <!------------------testimonial start---------------------->
+        <div class="container md:flex md:flex-wrap justify-between text-white w-[90%]">
+            <div class="text-center md:w-[27%] lg:mx-8 md:mx-4 m-5 bg-gray-900 px-5 py-9 rounded-xl"> 
+                <img src="./img/unsplash_jzY0KRJopEI (1).png" alt="img">
+                <p class="text-gray-400"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part..  </p>
+                <h3 class="font-bold mt-4 mb-2"> Adhyeta Patel </h3>
+                <h4 class="text-green-600"> Designer, iNeuron </h4>
+            </div>
+
+            <div class="text-center md:w-[27%] lg:mx-6 md:mx-4 m-5 bg-gray-900 px-5 py-9 rounded-xl"> 
+                <img src="./img/unsplash_eSjmZW97cH8.png" alt="img">
+                <p class="text-gray-400"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part..  </p>
+                <h3 class="font-bold mt-4 mb-2"> Adhyeta Patel </h3>
+                <h4 class="text-green-600"> Designer, iNeuron </h4>
+            </div>
+
+            <div class="text-center md:w-[27%] lg:mx-6 md:mx-4 m-5 bg-gray-900 px-5 py-9 rounded-xl"> 
+                <img src="./img/unsplash_X6Uj51n5CE8.png" alt="img">
+                <p class="text-gray-400"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part..  </p>
+                <h3 class="font-bold mt-4 mb-2"> Adhyeta Patel </h3>
+                <h4 class="text-green-600"> Designer, iNeuron </h4>
+            </div>
+
+            <div class="text-center md:w-[27%] lg:mx-6 md:mx-4 m-5 bg-gray-900 px-5 py-9 rounded-xl"> 
+                <img src="./img/unsplash_jzY0KRJopEI (1).png" alt="img">
+                <p class="text-gray-400"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part..  </p>
+                <h3 class="font-bold mt-4 mb-2"> Adhyeta Patel </h3>
+                <h4 class="text-green-600"> Designer, iNeuron </h4>
+            </div>
+
+            <div class="text-center md:w-[27%] lg:mx-6 md:mx-4 m-5 bg-gray-900 px-5 py-9 rounded-xl"> 
+                <img src="./img/unsplash_eSjmZW97cH8.png" alt="img">
+                <p class="text-gray-400"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part..  </p>
+                <h3 class="font-bold mt-4 mb-2"> Adhyeta Patel </h3>
+                <h4 class="text-green-600"> Designer, iNeuron </h4>
+            </div>
+
+            <div class="text-center md:w-[27%] lg:mx-6 md:mx-4 m-5 bg-gray-900 px-5 py-9 rounded-xl"> 
+                <img src="./img/unsplash_X6Uj51n5CE8.png" alt="img">
+                <p class="text-gray-400"> We are proud of our achievers to have proved their success through hard-work and dedication which has enabled them to achieve their dream job. You too can be part..  </p>
+                <h3 class="font-bold mt-4 mb-2"> Adhyeta Patel </h3>
+                <h4 class="text-green-600"> Designer, iNeuron </h4>
+            </div>
+        </div>
+    <!------------------testimonial end---------------------->
+
+        <!--------------------footer start---------------------->
+        <footer class="bg-gray-900 p-4 mt-16">
+             <div class="content sm:flex w-[95%] md:w-[85%] justify-between">
+               
+                    <div class="sm:flex text-white font-semibold items-center">
+                         <img src="./img/Asset 1@4x 1.png" alt="img" class="mr-6">
+                         <div class="display-block">
+                              <p class="text-gray-300 text-xs"> Terms of Use  |  Privacy Policy  </p>
+                              <p class="text-gray-600 text-xs"> © iNeuron Intelligence Pvt. Ltd. 2022. All Rights Reserved. </p>
+                         </div>
+                    </div>
+
+                <div class="flex justify-end items-center">
+                    <a href="#!" class="text-gray-600 pl-3">
+                       <img src="./img/youtube.png" alt="img">
+                    </a>
+                    <a href="#!" class="text-gray-600 pl-3">
+                        <img src="./img/twitter.png" alt="img">
+                    </a>
+                    <a href="#!" class="text-gray-600 pl-3">
+                        <img src="./img/linkedin.png" alt="img">
+                    </a>
+                    <a href="#!" class="text-gray-600 pl-3">
+                        <img src="./img/fb.png" alt="img">
+                    </a>   
+                 </div>
+             </div>
+        </footer>
+        <!--------------------footer end---------------------->
+  </div>
+  <!----------------------wrapper end----------------------->
+
+</div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+
+              // ------------------when click on responsive toggle then screen will be display none
+              function myFunctionnav() {
+        var x = document.getElementById("banner-wrap");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        }
+    </script>
+
+</body>
+
+</html>

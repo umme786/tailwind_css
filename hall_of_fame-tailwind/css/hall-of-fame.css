@@ -1,0 +1,75 @@
+.black{
+    background: #100C07;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.navbar, .main, .section, .content, .container {
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+.container img{
+    margin: 20px auto;
+}
+.gradient {
+    /* background: linear-gradient(to right, rgb(3 5 16), rgb(36 12 37 / 72%), rgb(5 12 22)); */
+    background-image: url(../img/Mask\ group-1.png);
+}
+.element {
+    animation: skew 3s infinite;
+    transform: skew(2deg);
+    animation-direction: alternate;
+  }
+@keyframes skew {
+    0% {
+        transform: translate(0, 0);    
+      }
+      100% {
+        transform: translate(20px, 50px);
+      }
+  }
+.tag{
+    margin: 0 auto;
+}
+.bg-gray-900{
+    background: #171C24 !important;
+}
+/* -------------------responsive------------------- */
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        left: 0;
+        z-index: 9;
+        position: fixed;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(4px) rotate(-41deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        transform: translateY(-2px) rotate(44deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        opacity: 0;
+    }
+}

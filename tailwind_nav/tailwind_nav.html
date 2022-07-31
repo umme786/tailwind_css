@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title> Tailwind Navbar (not Good Working) </title>
+	<style>
+		nav .icon-burger {
+			transform: translateY(-50%);
+		}
+
+		/*md*/
+		@media screen and (max-width: 768px) {
+			nav .links {
+				transition: all .1s ease-in-out;
+			}
+
+			nav :checked~.links {
+				bottom: 0;
+			}
+
+			nav :checked~.icon-burger .line:nth-child(1) {
+				transform: translateY(8px) rotate(45deg);
+			}
+
+			nav :checked~.icon-burger .line:nth-child(2) {
+				opacity: 0;
+			}
+
+			nav :checked~.icon-burger .line:nth-child(3) {
+				transform: translateY(-10px) rotate(-45deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="fixed z-10 left-0 right-0 top-0 px-8 h-[70px] bg-[#3e65da]">
+		<input id="nav-toggle" class="absolute top-[-100px]" type="checkbox">
+		<div class="logo md:float-left w-auto md:w-2/5 h-full flex items-center text-2xl text-white">
+			MINZ<strong>CODE</strong></div>
+		<ul
+			class="links fixed left-0 right-0 top-[70px] bottom-[100%] md:static float-none md:float-right z-9 md:z-auto w-auto md:w-3/5 h-auto md:h-full 
+			md:flex md:items-center justify-evenly md:justify-around md:p-0 md:m-0 overflow-hidden md:overflow-auto box-border bg-gray-700/80 md:bg-[#3e65da] block md:flex">
+			<li class="list-none"><a href="#home"
+					class="block text-xl md:text-base p-2 bold text-white no-underline text-center">Home</a></li>
+			<li class="list-none"><a href="#about"
+					class="block text-xl md:text-base p-2 bold text-white no-underline text-center">About</a></li>
+			<li class="list-none"><a href="#work"
+					class="block text-xl md:text-base p-2 bold text-white no-underline text-center">Work</a></li>
+			<li class="list-none"><a href="#projects"
+					class="block text-xl md:text-base p-2 bold text-white no-underline text-center">Projects</a></li>
+			<li class="list-none"><a href="#contact"
+					class="block text-xl md:text-base p-2 bold text-white no-underline text-center">Contact</a></li>
+		</ul>
+		<label for="nav-toggle" class="icon-burger block md:hidden absolute right-[5%] top-[50%]">
+			<div class="line w-[30px] h-[5px] bg-white my-1 rounded duration-1000"></div>
+			<div class="line w-[30px] h-[5px] bg-white my-1 rounded duration-1000"></div>
+			<div class="line w-[30px] h-[5px] bg-white my-1 rounded duration-1000"></div>
+		</label>
+	</nav>
+</body>
+</html>

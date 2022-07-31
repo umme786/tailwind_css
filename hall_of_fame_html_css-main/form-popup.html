@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/form-new.css">
+  <title> Form popup </title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&family=Noto+Sans&display=swap');
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgb(233 231 231 / 84%);
+    }
+
+    /* Modal Content */
+    .modal-content {
+      text-align: center;
+      position: relative;
+      border-radius: 50px;
+      background-color: black;
+      margin: auto;
+      padding: 20px 0px;
+      border: 1px solid #888;
+      width: 60%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #FDBA0E;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .modal-header h2 {
+      color: #F7B60E;
+      font-size: 36px;
+      font-family: 'DM Serif Display';
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .modal-header h3 {
+      color: #f8f7f6;
+      font-size: 16px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .modal-body {
+      padding: 2px 16px;
+    }
+
+    .modal-body {
+      color: #FFF7DC;
+    }
+
+    .modal-body p {
+      width: 75%;
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 160%;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .modal-footer {
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .button-wrap2 {
+      border: none;
+      border-radius: 10px;
+      margin: 30px 0px;
+    }
+
+    .button2 {
+      border: none;
+      color: black;
+      padding: 10px 40px;
+      text-align: center;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      outline: none;
+      background: #FDBA0E;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .gift2 {
+      display: none;
+    }
+
+    /* ---------------------responsive------------------- */
+    @media only screen and (max-width: 1000px) {
+      .modal-body p {
+        width: 90%;
+      }
+
+      .modal-header h2 {
+        font-size: 30px;
+      }
+
+      .close {
+        margin-right: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 770px) {
+      .modal-body p {
+        font-size: 18px;
+        width: 95%;
+      }
+
+      .gift1 {
+        display: none;
+      }
+
+      .gift2 {
+        display: block;
+        margin: 0 auto;
+        width: 35%;
+      }
+
+      .close {
+        display: none;
+      }
+
+      .modal-content {
+        width: 70%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .modal-content {
+        width: 80%;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .modal-content {
+        width: 90%;
+      }
+    }
+
+    @media only screen and (max-width: 432px) {
+      .modal-header h2 {
+        font-size: 26px;
+      }
+
+      .modal-body p {
+        font-size: 17px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-----------------page wrapper start----------------->
+  <div class="page-wrapper">
+    <!-----------------Header start----------------->
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="nav-logo"> <img src="./img/Asset 1@4x 1.png" alt="img"></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link"> Courses library </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> One Neuron </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> Internship </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!-----------------Header end----------------->
+
+    <!-----------------form start----------------->
+    <div class="container content">
+      <div class="share-journey">
+        <h1 class="journey"> Share your journey! </h1>
+      </div>
+
+      <form action="/action_page.php" method="post">
+
+        <div class="profile1">
+          <div class="pro1 image-upload">
+            <label for="file-input">
+              <img src="./img/unsplash_jzY0KRJopEI (1).png" />
+            </label>
+            <input id="file-input" type="file" />
+          </div>
+
+          <div class="pro2">
+            <input type="text" id="name" name="name" placeholder="Name.." >
+          </div>
+
+          <div class="pro2">
+            <input type="email" id="email" name="email" placeholder="Email Id.." >
+          </div>
+
+          <div class="pro2">
+            <input type="link" id="link" name="link" placeholder="LinkedIn id.." >
+          </div>
+        </div>
+
+        <div class="profile2">
+          <div class="pro3">
+            <input type="text" id="company" class="company" name="name" placeholder="Company.." >
+          </div>
+
+          <div class="pro3">
+            <input type="text" id="company" class="company" name="name" placeholder="Designation.." >
+          </div>
+        </div>
+
+        <div class="profile3">
+          <div class="image-upload">
+            <label for="file-input" class="pro4">
+              <input type="text" id="company" name="name" placeholder="Offer letter.." >
+
+              <div class="upload-img">
+                <img src="./img/Frame 91.png" alt="img" class="offer" />
+              </div>
+            </label>
+
+            <input id="file-input" type="file" />
+          </div>
+        </div>
+
+        <div class="profile4">
+          <textarea type="text" id="company" class="company company2" rows="8" placeholder="Your thoughts about us"
+            value="Your thoughts about us" ></textarea>
+        </div>
+
+        <div class="button-wrap">
+          <!-- <a href="#" class="button"> Submit </a>  -->
+          <buttton class="button"  id="myBtn"> Submit </buttton>
+        </div>
+
+      </form>
+    </div>
+    <!-----------------form end-------------------->
+    <!-----------------footer start-------------------->
+
+    <div class="footer-wrap">
+      <div class="footer">
+        <div class="copyright">
+          <div class="foot">
+            <img src="./img/Asset 1@4x 1.png" alt="img">
+          </div>
+          <div class="foot foot2 footer-block">
+            <h3> Terms of Use | Privacy Policy </h3>
+            <p> © iNeuron Intelligence Pvt. Ltd. 2022. All Rights Reserved. </p>
+          </div>
+        </div>
+        <div class="foot-img">
+          <img src="./img/youtube.png" alt="img" class="youtube">
+          <img src="./img/twitter.png" alt="img" class="twitter">
+          <img src="./img/linkedin.png" alt="img" class="linkedin">
+          <img src="./img/fb.png" alt="img" class="fb">
+        </div>
+      </div>
+
+      <div class="foot foot2 footer-none">
+        <div class="display-wrap">
+          <h3> Terms of Use | Privacy Policy </h3>
+          <p> © iNeuron Intelligence Pvt. Ltd. 2022. All Rights Reserved. </p>
+        </div>
+      </div>
+
+    </div>
+    <!-----------------footer end-------------------->
+  </div>
+  <!-----------------page wrapper end----------------->
+
+  <!-- -------------------popup start--------------------------- -->
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2> Thank you for sharing that! </h2>
+        <h3> Here is little something to show our gratitude. </h3>
+      </div>
+      <div class="modal-body">
+        <img src="./gifts 1.png" alt="img" class="gift1">
+        <img src="./gifts 1 (1).png" alt="img" class="gift2">
+        <p> Lörem ipsum pseudoaktiv myviligen och er tir ren, i homolagt då kasamma till paranen. Plaskap tisperen
+          pseudonde och äralingar saviledes sydyligt en pladade. Saräktigt enkortsdator irad dede anaktiga tepresade.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <div class="button-wrap2"> <a href="#" class="button2"> Submit </a> </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- -------------------popup end--------------------------- -->
+
+  <!------------------javascript start-------------------------->
+  <script>
+    // --------------------------navbar-----------------------------
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+
+    // --------------------------profile photo-----------------------------
+    $(document).ready(function () {
+
+      var readURL = function (input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $('.profile-pic').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $(".file-upload").on('change', function () {
+        readURL(this);
+      });
+
+      $(".upload-button").on('click', function () {
+        $(".file-upload").click();
+      });
+    });
+
+
+  </script>
+
+<!-- ----------------popup start------------------ -->
+<script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+</script>
+  <!------------------javascript end------------------------->
+</body>
+
+</html>

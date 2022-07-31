@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/form-new.css">
+    <title> Form new </title>
+  
+</head>
+<body>
+    <!-----------------page wrapper start----------------->
+    <div class="page-wrapper">
+    <!-----------------Header start----------------->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo"> <img src="./img/Asset 1@4x 1.png" alt="img"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">  Courses library </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> One Neuron </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> Internship  </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <!-----------------Header end----------------->
+
+    <!-----------------form start----------------->
+    <div class="container content">
+        <div class="share-journey">
+            <h1 class="journey"> Share your journey! </h1>
+        </div>
+     
+        <form  action="/action_page.php" method="post">
+
+            <div class="profile1">     
+                <div class="pro1 image-upload">
+                    <label for="file-input">
+                        <img src="./img/unsplash_jzY0KRJopEI (1).png"/>
+                    </label>
+                    <input id="file-input" type="file"/>
+                </div>
+    
+                <div class="pro2">
+                    <input type="text" id="name" name="name" placeholder="Name.." required>
+                </div>
+    
+                <div class="pro2">
+                    <input type="email" id="email" name="email" placeholder="Email Id.." required>
+                </div>
+    
+                <div class="pro2">
+                    <input type="link" id="link" name="link" placeholder="LinkedIn id.." required>
+                </div>
+            </div>
+
+            <div class="profile2">
+                <div class="pro3">
+                    <input type="text" id="company" class="company" name="name" placeholder="Company.." required>
+                </div>
+    
+                <div class="pro3">
+                    <input type="text" id="company"  class="company" name="name" placeholder="Designation.." required>
+                </div>
+            </div>
+
+            <div class="profile3">
+                <div class="image-upload">
+                    <label for="file-input" class="pro4">
+                        <input type="text" id="company" name="name" placeholder="Offer letter.." required>
+                        
+                      <div class="upload-img">
+                        <img src="./img/Frame 91.png" alt="img" class="offer"/>
+                      </div>
+                    </label>
+
+                    <input id="file-input" type="file" />
+                </div>
+            </div> 
+
+            <div class="profile4">
+                    <textarea type="text" id="company" class="company company2" rows="8" placeholder="Your thoughts about us" value="Your thoughts about us" required></textarea> 
+            </div> 
+
+            <div class="button-wrap"> 
+                <!-- <a href="#" class="button"> Submit </a>  -->
+                <input type="submit" class="button" value="Submit">
+            </div>
+          
+        </form>
+    </div>
+  <!-----------------form end-------------------->
+  <!-----------------footer start-------------------->
+
+<div class="footer-wrap">
+  <div class="footer">
+    <div class="copyright">
+        <div class="foot">
+            <img src="./img/Asset 1@4x 1.png" alt="img">
+        </div>
+        <div class="foot foot2 footer-block">
+            <h3> Terms of Use  |  Privacy Policy </h3>
+            <p> © iNeuron Intelligence Pvt. Ltd. 2022. All Rights Reserved. </p>
+        </div>
+    </div>
+      <div class="foot-img">
+          <img src="./img/youtube.png" alt="img" class="youtube">
+          <img src="./img/twitter.png" alt="img" class="twitter">
+          <img src="./img/linkedin.png" alt="img" class="linkedin">
+          <img src="./img/fb.png" alt="img" class="fb">
+      </div>
+  </div>
+
+  <div class="foot foot2 footer-none">
+ <div class="display-wrap">
+    <h3> Terms of Use  |  Privacy Policy </h3>
+    <p> © iNeuron Intelligence Pvt. Ltd. 2022. All Rights Reserved. </p>
+ </div>
+</div>
+
+</div>
+  <!-----------------footer end-------------------->
+
+</div>
+    <!-----------------page wrapper end----------------->
+
+    <!------------------javascript start-------------------------->
+<script>
+    // --------------------------navbar-----------------------------
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+
+    // --------------------------profile photo-----------------------------
+    $(document).ready(function() {
+    
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-pic').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+
+    $(".upload-button").on('click', function() {
+    $(".file-upload").click();
+    });
+    });
+
+</script>
+    <!------------------javascript end------------------------->
+</body>
+</html>
